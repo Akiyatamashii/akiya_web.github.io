@@ -1,0 +1,182 @@
+@import url(animation.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+body {
+    box-sizing: border-box;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Noto Sans TC',sans-serif !important;
+}
+
+p {
+    color: white;
+}
+
+#bg {
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgb(90,0,0) 0px,rgba(0, 0, 0, 0.89) 350px);
+}
+
+#main {
+    margin-top: 150px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 1200px;
+    height: auto;
+    grid-template-rows: 100px 50px max-content;
+}
+
+#bar-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+}
+
+#bar {
+    height: 100px;
+    grid-row: 1;
+    background-color: rgb(65, 30, 30);
+    border-radius: 0px 20px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+    border-radius: 20px;
+    right: 20px;
+    bottom: 50px;
+    margin-right: 20px;
+    transition: .2s;
+}
+
+#profile img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#profile:hover {
+    bottom: 60px;
+    transform: scale(1.1);
+}
+
+#options {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+#options ul {
+    display: flex;
+    gap: 100px;
+}
+
+#options ul li {
+    list-style: none;
+}
+
+#options ul li a {
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: .2s;
+}
+
+#options ul:hover li a {
+    color: white;
+    text-shadow: white 0 0 15px;
+}
+
+#options ul:hover li a:not(:hover) {
+    color: white;
+    text-shadow: white 0 0 0px;
+    opacity: 0.5;
+    filter: blur(1px);
+}
+
+.option-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 70px;
+    border-radius: 10px;
+    border: 5px solid black;
+}
+
+#options ul:hover .option-box {
+    background-color: rgba(37, 17, 17,1);
+    box-shadow: 0 0 5px rgba(255, 0, 0,1);
+    border: 0px solid black;
+}
+
+#options ul:hover .option-box:not(:hover) {
+    background-color: rgba(37, 17, 17,0);
+    box-shadow: 0 0 5px rgba(255, 0, 0,0);
+    border: 5px solid black;
+}
+
+#content {
+    position: relative;
+    grid-row: 3;
+    margin-top: 50px;
+    background-color: rgb(146,146,146,0.185);
+    width: 1200px;
+    height: auto;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#content::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    width: 1200px;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255,0,0);
+    animation: contentrgb 5s infinite ease;
+}
+
+.content-box {
+    position: relative;
+    animation: displayanim 1s ease;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.main-text {
+    font-size: 56px;
+    font-weight: 500;
+}
+
+.content-text {
+    font-size: 24px;
+    line-height: .9;
+}
+
+#mainpage {
+    text-align: center  ;
+}
