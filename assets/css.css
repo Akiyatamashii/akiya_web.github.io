@@ -62,6 +62,19 @@ p {
     transition: .2s;
 }
 
+#profile::after {
+    content: "主頁";
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: .5s;
+    z-index: 10;
+}
+
 #profile img {
     max-width: 100%;
     max-height: 100%;
@@ -70,6 +83,15 @@ p {
 #profile:hover {
     bottom: 60px;
     transform: scale(1.1);
+    z-index: 1;
+}
+
+#profile:hover img {
+    filter: blur(5px);
+}
+
+#profile:hover::after {
+    opacity: 1;
 }
 
 #options {
@@ -138,7 +160,7 @@ p {
     width: 1200px;
     height: auto;
     border-radius: 20px;
-    padding: 20px;
+    padding: 20px 40px;
 }
 
 #content::after {
@@ -178,5 +200,5 @@ p {
 }
 
 #mainpage {
-    text-align: center  ;
+    text-align: center;
 }
