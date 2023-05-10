@@ -14,6 +14,10 @@ p {
     color: white;
 }
 
+a {
+    text-decoration: none;
+}
+
 #bg {
     min-height: 100vh;
     height: auto;
@@ -45,6 +49,7 @@ p {
     grid-row: 1;
     background-color: rgb(65, 30, 30);
     border-radius: 0px 20px 20px 20px;
+    box-shadow: 15px 15px 15px black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,9 +68,15 @@ p {
 }
 
 #profile::after {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     content: "主頁";
     color: white;
     font-size: 30px;
+    -webkit-text-stroke: 1px black;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -78,6 +89,7 @@ p {
 #profile img {
     max-width: 100%;
     max-height: 100%;
+    transition: .5s;
 }
 
 #profile:hover {
@@ -92,6 +104,7 @@ p {
 
 #profile:hover::after {
     opacity: 1;
+    font-size: 50px;
 }
 
 #options {
@@ -161,6 +174,7 @@ p {
     height: auto;
     border-radius: 20px;
     padding: 20px 40px;
+    box-shadow: 15px 15px 15px black;
 }
 
 #content::after {
@@ -196,9 +210,20 @@ p {
 
 .content-text {
     font-size: 24px;
-    line-height: .9;
+    line-height: 1.5;
 }
 
 #mainpage {
     text-align: center;
+}
+
+a.active div {
+    background-color: rgba(37, 17, 17,1);
+    box-shadow: 0 0 5px rgba(255, 0, 0,1);
+    border: 0px solid black;
+}
+
+.long-text p {
+    text-align: justify;
+    margin: 0;
 }

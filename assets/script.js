@@ -1,19 +1,20 @@
-const links = document.querySelectorAll('.tab-link');
-const contents = document.querySelectorAll('.tab-content');
+const tabLinks = document.querySelectorAll('.tab-link');
+const tabContents = document.querySelectorAll('.tab-content');
 
-links.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault();
-    
-    // 取得點擊的連結的 href 屬性值
-    const target = event.target.getAttribute('href');
-    
-    // 隱藏所有 tab-content 元素
-    contents.forEach((content) => {
+tabLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    // 隱藏所有的 tab-link
+    tabLinks.forEach(link => {
+      link.classList.remove('active');
+    });
+    // 隱藏所有的 tab-content
+    tabContents.forEach(content => {
       content.classList.remove('active');
     });
-    
-    // 顯示目標 tab-content 元素
-    document.querySelector(target).classList.add('active');
+    // 顯示與當前選項相對應的 tab-link 與 tab-content
+    const selectedTab = link.dataset.tab;
+    const selectedContent = document.querySelector(`#${selectedTab}`);
+    link.classList.add('active');
+    selectedContent.classList.add('active');
   });
 });
