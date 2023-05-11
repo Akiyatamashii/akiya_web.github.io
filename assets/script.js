@@ -18,3 +18,12 @@ tabLinks.forEach(link => {
     selectedContent.classList.add('active');
   });
 });
+
+window.addEventListener("scroll", function() {
+  var backtop = document.getElementById("back-top");
+  if (window.pageYOffset > 1) {
+    backtop.style.display = "block";
+  } else {
+    backtop.style.display = "none";
+  }
+});

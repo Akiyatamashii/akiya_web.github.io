@@ -12,23 +12,40 @@
 </head>
 
 <body>
+    <div id="top"></div>
     <div id="bg">
+        <a href="#top">
+            <div id="back-top">
+                <div><ion-icon name="chevron-up-outline"></ion-icon></div>
+                <div><p>Top</p></div>
+            </div>
+        </a>
         <div id="main">
             <div id="bar">
                 <div id="bar-box">
-                    <a href="./index.html"><div id="profile"><img src="./images/profile.jpg" alt=""></div></a>
+                    <a href="./index.html">
+                        <div id="profile"><img src="./images/profile.jpg" alt=""></div>
+                    </a>
                     <div id="options">
                         <ul>
-                            <li><a href="#mainpage" class="tab-link active" data-tab="mainpage"><div class="option-box">主頁</div></a></li>
-                            <li><a href="#information" class="tab-link" data-tab="information"><div class="option-box">個人介紹</div></a></li>
-                            <li><a href="#game" class="tab-link" data-tab="game"><div class="option-box">遊戲</div></a></li>
-                            <li><a href="#link" class="tab-link" data-tab="link"><div class="option-box">連結</div></a></li>
+                            <li><a href="#mainpage" class="tab-link active" data-tab="mainpage">
+                                    <div class="option-box">主頁</div>
+                                </a></li>
+                            <li><a href="#information" class="tab-link" data-tab="information">
+                                    <div class="option-box">個人介紹</div>
+                                </a></li>
+                            <li><a href="#game" class="tab-link" data-tab="game">
+                                    <div class="option-box">遊戲</div>
+                                </a></li>
+                            <li><a href="#link" class="tab-link" data-tab="link">
+                                    <div class="option-box">連結</div>
+                                </a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div id="content">
-                <div id="mainpage" class="tab-content active1">
+                <div id="mainpage" class="tab-content active">
                     <div class="content-box">
                         <p class="main-text">Akiya的個人空間</p>
                         <p class="content-text">這裡將會呈現出有關我的事物</p>
@@ -40,20 +57,29 @@
                         <p class="content-text">小弟虛心受教</p>
                     </div>
                 </div>
-                <div id="information" class="tab-content active">
-                    <div class="content-box">
-                        <p class="main-text">自我介紹</p>
-                        <p class="content-text">名稱：秋夜たましい-Akiyatamashii</p>
-                        <p class="content-text">生日：2003/12/05</p>
-                        <p class="content-text">年齡：19</p>
-                        <p class="content-text">興趣：電腦、遊戲、音樂、寫程式</p>
-                        <p class="content-text">自我介紹：</p>
-                        <div class="long-text" style="width: 700px;">
-                            <p class="content-text">
-                                我是個大學生，目前就讀數位內容應用與管理系。
-                            </p>
-                            <p class="content-text">因為對程式以及網頁及其有興趣，所以就讀相關科系想學習更深入的事物，目前還只是大一生還不會很多東西，此網頁也是我用來做為練習的網頁，如有能改善的地方，還請各位多多指點。</p>
-                            <p class="content-text">除了coding以外，我也很喜歡玩遊戲，我喜歡玩各種遊戲，目前最常玩的是OSU!，其他遊戲雖然也有玩不過就沒有那麼擅長了，如果想一起玩的話非常歡迎，我的相關聯繫資訊都放在連結，有興趣的話可以去看看並連繫我。</p>
+                <div id="information" class="tab-content">
+                    <div class="content-box inform">
+                        <div id="inform-text">
+                            <p class="main-text">自我介紹</p>
+                            <p class="content-text">名稱：秋夜たましい-Akiyatamashii</p>
+                            <p class="content-text">生日：2003/12/05</p>
+                            <p class="content-text">年齡：19</p>
+                            <p class="content-text">興趣：電腦、遊戲、音樂、寫程式</p>
+                            <p class="content-text">自我介紹：</p>
+                            <div class="long-text" style="width: 700px;">
+                                <p class="content-text">
+                                    我是個大學生，目前就讀數位內容應用與管理系。
+                                </p>
+                                <p class="content-text">
+                                    因為對程式以及網頁及其有興趣，所以就讀相關科系想學習更深入的事物，目前還只是大一生還不會很多東西，此網頁也是我用來做為練習的網頁，如有能改善的地方，還請各位多多指點。
+                                </p>
+                                <p class="content-text">
+                                    除了coding以外，我也很喜歡玩遊戲，我喜歡玩各種遊戲，目前最常玩的是OSU!，其他遊戲雖然也有玩不過就沒有那麼擅長了，如果想一起玩的話非常歡迎，我的相關聯繫資訊都放在連結，有興趣的話可以去看看並連繫我。
+                                </p>
+                            </div>
+                        </div>
+                        <div id="inform-img">
+                            <img src="./images/profile.jpg" alt="頭像">
                         </div>
                     </div>
                 </div>
@@ -73,6 +99,8 @@
         </div>
     </div>
     <script src="./assets/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
