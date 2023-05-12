@@ -16,8 +16,12 @@
     <div id="bg">
         <a href="#top">
             <div id="back-top">
-                <div><ion-icon name="chevron-up-outline"></ion-icon></div>
-                <div><p>Top</p></div>
+                <div>
+                    <ion-icon name="chevron-up-outline"></ion-icon>
+                </div>
+                <div>
+                    <p>Top</p>
+                </div>
             </div>
         </a>
         <div id="main">
@@ -45,9 +49,9 @@
                 </div>
             </div>
             <div id="content">
-                <div id="mainpage" class="tab-content active">
+                <div id="mainpage" class="tab-content activ">
                     <div class="content-box">
-                        <p class="main-text">Akiya的個人空間</p>
+                        <p class="mainpage-text">Akiya的個人空間</p>
                         <p class="content-text">這裡將會呈現出有關我的事物</p>
                         <p class="content-text">有遊戲、作品、相關連結以及連絡方式</p>
                         <p class="content-text">對我有興趣或是想要了解我的話</p>
@@ -79,14 +83,71 @@
                             </div>
                         </div>
                         <div id="inform-img">
-                            <img src="./images/profile.jpg" alt="頭像">
+                            <div><img src="./images/profile.jpg" alt="頭像"></div>
+                            <div id="media">
+                                <a href="https://www.instagram.com/akiya_tamashii/" target="_blank">
+                                    <div class="icon-box">
+                                        <div id="ins"></div>
+                                        <ion-icon name="logo-instagram"></ion-icon>
+                                    </div>
+                                </a>
+                                <a href="https://discord.gg/fHAVT7hESt" target="_blank">
+                                    <div class="icon-box">
+                                        <div id="dc"></div>
+                                        <ion-icon id="dc-icon" name="logo-discord"></ion-icon>
+                                    </div>
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCAnac_cYJyhv7Il9lQtyE3w" target="_blank">
+                                    <div class="icon-box">
+                                        <div id="yt"></div>
+                                        <ion-icon id="yt-icon" name="logo-youtube"></ion-icon>
+                                    </div>
+                                </a>
+                                <a href="https://www.twitch.tv/akiyatamashii" target="_blank">
+                                    <div class="icon-box">
+                                        <div id="tw"></div>
+                                        <ion-icon name="logo-twitch"></ion-icon>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div id="game" class="tab-content">
+                <div id="game" class="tab-content active">
                     <div class="content-box">
-                        <p class="main-text">遊戲</p>
-                        <p class="content-text">待編寫</p>
+                        <div class="main-text-box">
+                            <p class="main-text">遊戲</p>
+                        </div>
+                        <p class="content-text">一些常玩的遊戲，如果有想一起玩的都非常歡迎~</p>
+                        <div id="desktop">
+                            <div class="secondary-text">
+                                <p>電腦 <span style="font-size: 40px;">Desktop<span></p>
+                            </div>
+                            <div class="secondary-icon">
+                                <img src="./images/game-icon/Osu!_Logo_2016.svg" alt="osu!">
+                                <img src="./images/game-icon/logo-sb-l.png" alt="hmrsb">
+                                <img src="./images/game-icon/Support_logo_200X90.png" alt="kartrider:dirft">
+                                <img src="./images/game-icon/minecraft_logo_icon_168974.png" alt="minecraft">
+                            </div>
+                        </div>
+                        <div id="phone">
+                            <div class="secondary-text">
+                                <p>手機 <span style="font-size: 40px;">Phone</span></p>
+                            </div>
+                            <div class="secondary-icon">
+                                <img src="./images/game-icon/4ce9730e-8e97-4ad3-a4ad-5da53aee6a14-profile_image-300x300.png" alt="極速領域">
+                                <img src="./images/game-icon/220px-Tower_of_Saviors_app_icon.png" alt="神魔之塔">
+                            </div>
+                        </div>
+                        <div id="arcade">
+                            <div class="secondary-text">
+                                <p>街機 <span style="font-size: 40px;">Arcade</span></p>
+                            </div>
+                            <div class="secondary-icon">
+                                <img src="./images/game-icon/Maimai_DX_International_Logo.png" alt="maimai">
+                                <img src="./images/game-icon/kv_logo.png" alt="chunithm">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div id="link" class="tab-content">

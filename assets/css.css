@@ -32,6 +32,7 @@ a {
     border-radius: 20px;
     opacity: 0.2;
     transition: .3s;
+    z-index: 500;
 }
 
 #back-top ion-icon {
@@ -131,7 +132,6 @@ a {
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: .5s;
-    z-index: 10;
 }
 
 #profile img {
@@ -143,7 +143,6 @@ a {
 #profile:hover {
     bottom: 60px;
     transform: scale(1.1);
-    z-index: 1;
 }
 
 #profile:hover img {
@@ -251,9 +250,77 @@ a {
     display: block;
 }
 
-.main-text {
+.tab-link {
+    
+}
+
+.mainpage-text {
     font-size: 56px;
     font-weight: 500;
+}
+
+.main-text {
+    position: relative;
+    align-items: center;
+    display: inline-block;
+    width: auto;
+    height: 90px;
+    padding-right: 70px;
+    font-size: 56px;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+.main-text::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate3d(-200px,-50%,0);
+    border-bottom:5px rgb(129, 49, 49) solid;
+}
+
+.tab-content.active .main-text::after {
+    animation: secshowline 1.5s ease forwards;
+} 
+
+.tab-content.active .secondary-text::after {
+    animation: secshowline 1s ease forwards .35s;
+} 
+
+.secondary-text {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    width: 350px;
+    height: 80px;
+    font-size: 48px;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+.secondary-text::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-bottom:5px rgb(129, 49, 49) solid;
+    transform: translate3d(-350px,-50%,0);
+}
+
+.secondary-icon {
+    margin:20px 0 ;
+    display: flex;
+    gap: 40px;
+}
+
+.secondary-icon img {
+    width: 150px;
+    height: auto;
 }
 
 .content-text {
@@ -275,15 +342,16 @@ a {
 }
 
 #inform-img {
+    position: relative;
     padding: 40px;
     height: 100%;
-    width: 100%;
-
+    width: 460px;
 }
 
 #inform-img img {
     width: 100%;
     height: auto;
+    border-radius: 20px;
 }
 
 a.active div {
@@ -295,4 +363,102 @@ a.active div {
 .long-text p {
     text-align: justify;
     margin: 0;
+}
+
+#media {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+#media a {
+    z-index: 1;
+}
+
+.icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    border: 1px black solid;
+    border-radius: 50%;
+}
+
+#media ion-icon {
+    font-size: 50px;
+    color: black;
+    transition: .2s;
+}
+
+#ins {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border: 1 black solid;
+    border-radius: 50%;
+    background: linear-gradient(to top, #feda75 0%, #fa7e1e 20%, #d62976 40%, #962fbf 60% ,#4f5bd5 80%);
+    transform: rotate(-15deg);
+    opacity: 0;
+    transition: .2s;
+}
+
+.icon-box:hover #ins {
+    opacity: 1;
+}
+
+#dc {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border: 1 black solid;
+    border-radius: 50%;
+    background-color: white;
+    transform: rotate(-15deg);
+    opacity: 0;
+    transition: .2s;
+}
+
+.icon-box:hover #dc {
+    opacity: 1;
+}
+
+.icon-box:hover #dc-icon {
+    color: #7289DA;
+}
+
+#yt {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border: 1 black solid;
+    border-radius: 50%;
+    background-color: white;
+    transform: rotate(-15deg);
+    opacity: 0;
+    transition: .2s;
+}
+
+.icon-box:hover #yt {
+    opacity: 1;
+}
+
+.icon-box:hover #yt-icon {
+    color: #E52D27;
+}
+
+#tw {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border: 1 black solid;
+    border-radius: 50%;
+    background-color: #6441A4;
+    transform: rotate(-15deg);
+    opacity: 0;
+    transition: .2s;
+}
+
+.icon-box:hover #tw {
+    opacity: 1;
 }

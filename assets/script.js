@@ -2,7 +2,8 @@ const tabLinks = document.querySelectorAll('.tab-link');
 const tabContents = document.querySelectorAll('.tab-content');
 
 tabLinks.forEach(link => {
-  link.addEventListener('click', () => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault(); // 防止點擊 a 時跳轉到 #123
     // 隱藏所有的 tab-link
     tabLinks.forEach(link => {
       link.classList.remove('active');
@@ -19,7 +20,7 @@ tabLinks.forEach(link => {
   });
 });
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
   var backtop = document.getElementById("back-top");
   if (window.pageYOffset > 1) {
     backtop.style.display = "block";

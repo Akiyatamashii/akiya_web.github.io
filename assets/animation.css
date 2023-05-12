@@ -14,3 +14,21 @@
       opacity: 1;
     }
 }
+
+@keyframes mainshowline {
+    from {
+      transform: translate3d(-200px,-50%,0);
+    }
+    to {
+      transform: translate3d(0,-50%,0);
+    }
+}
+
+@keyframes secshowline {
+    from {
+      transform: translate3d(-300px,-50%,0);
+    }
+    to {
+      transform: translate3d(0,-50%,0);
+    }
+}
