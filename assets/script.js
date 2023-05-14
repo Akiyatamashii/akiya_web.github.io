@@ -1,5 +1,6 @@
 const tabLinks = document.querySelectorAll('.tab-link');
 const tabContents = document.querySelectorAll('.tab-content');
+const content = document.querySelector(`#content`);
 
 tabLinks.forEach(link => {
   link.addEventListener('click', (event) => {
@@ -17,6 +18,19 @@ tabLinks.forEach(link => {
     const selectedContent = document.querySelector(`#${selectedTab}`);
     link.classList.add('active');
     selectedContent.classList.add('active');
+
+    if (link.getAttribute('href') === '#game') {
+      const gameContent = document.querySelector(`#game-content`);
+      gameContent.classList.add('active');
+    } else {
+      const gameContent = document.querySelector(`#game-content`);
+      gameContent.classList.remove('active');
+    }
+
+    content.classList.remove('active');
+    setTimeout(() => {
+      content.classList.add('active');
+    }, 0);
   });
 });
 
